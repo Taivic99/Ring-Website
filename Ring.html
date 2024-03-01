@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ring Site!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+
+ <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <nav id="navbar">
+        <img src="images/logo.png.jpeg" alt="Logo image">
+    </nav>
+
+
+    
+    <div class="container">
+      <div class="image">
+          <img src="images/img1.png.jpeg" alt="Image">
+      </div>
+      <div class="wel-text">
+          <h2>
+            Welcome to Ring Royalty, your premier destination for exquisite rings that exude elegance and style.</h2>
+          <p class="p-bold">At Ring Royalty, we take pride in offering a curated selection of high-quality rings crafted with precision and attention to detail.</p>
+      </div>
+  </div>
+
+
+
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/image1.png.webp" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/image2.png.jpeg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/image3.png.jpeg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/image4.png.jpeg" style="width:100%">
+      <div class="text">Caption Four</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+
+ <hr>
+  <div class="contact-me">
+    <h2>Get In Touch</h2>
+    <h3>If you love the Ring as much as i do.</h3>
+    <p class="p-bold2"> Whether you're searching for the perfect ring to symbolize your love and commitment or looking to treat yourself to a stunning piece of jewelry, Ring Royalty has you covered..</p>
+    <a class="btn" href="">CONTACT ME</a>
+  </div>
+</div>
+
+
+<div class="bottom-container">
+  <a class="footer-link" href="">LinkedIn</a>
+  <a class="footer-link" href="">Twitter</a>
+  <a class="footer-link" href="">Website</a>
+  <p class="copyright">© 2023 @ Ring Royalty.</p>
+</div>
+
+
+
+
+
+    <script>
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
+</body>
+</html>
